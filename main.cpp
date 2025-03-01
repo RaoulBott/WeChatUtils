@@ -319,7 +319,7 @@ typedef struct _wechat_extdevnewpwd {
 //   Structure 2: extdevStrStruct - 0x20
 //   Structure 3: extdevStrStruct
 //   Structure 4: extdevStrStruct + 0x40
-void ReadAllProgramStringsFromExtdev(HANDLE hProcess, void* extdevStrStruct, wechat_extdevnewpwd &outStruct) {
+void ReadAllProgramStringsFromExtdev(HANDLE hProcess, void* extdevStrStruct, wechat_extdevnewpwd& outStruct) {
     try {
         // Try two offsets to determine the address of structure 1
         void* candidate1 = static_cast<BYTE*>(extdevStrStruct) - 0x58;
